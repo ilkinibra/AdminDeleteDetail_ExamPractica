@@ -1,0 +1,43 @@
+﻿@model IEnumerable<NoticeBoard>
+@{
+	ViewData["Title"] = "Index";
+	int count = 0;
+}
+<div class="row">
+	<div class="col-lg-8 grid-margin stretch-card">
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title">Event Table</h4>
+				<a class="btn btn-success" asp-controller="NoticeBoard" asp-action="Create" >Create</a>
+				<p class="card-description">
+				</p>
+				<div class="table-responsive">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Count</th>
+								<th>DateTime</th>
+								<th>Setting</th>
+							</tr>
+						</thead>
+						<tbody>
+							@foreach (var item in Model)
+							{
+								count++;
+								<tr>
+									<td>@count</td>
+									<td>@item.DateTime</td>
+									<td>
+										<a class="btn btn-danger" asp-controller="NoticeBoard" asp-action="Delete" asp-route-id="@item.Id"> <i class="mdi mdi-delete"></i></a>
+										<a class="btn btn-primary" asp-controller="NoticeBoard" asp-action="Update" asp-route-id="@item.Id"><i class="mdi mdi-table-edit"></i></a>
+										<a class="btn btn-info" asp-controller="NoticeBoard" asp-action="Detail" asp-route-id="@item.Id"> <i class="mdi mdi-account-card-details"></i></a>
+									</td>
+								</tr>
+							}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
