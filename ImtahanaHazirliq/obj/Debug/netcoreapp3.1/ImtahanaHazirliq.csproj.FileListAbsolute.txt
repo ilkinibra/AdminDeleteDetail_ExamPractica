@@ -133,3 +133,8 @@ C:\Users\HP\Desktop\AspNet\ImtahanaHazirliq\ImtahanaHazirliq\obj\Debug\netcoreap
 C:\Users\HP\Desktop\AspNet\ImtahanaHazirliq\ImtahanaHazirliq\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\NoticeBoard\Detail.cshtml.g.cs
 C:\Users\HP\Desktop\AspNet\ImtahanaHazirliq\ImtahanaHazirliq\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\NoticeBoardRight\Index.cshtml.g.cs
 C:\Users\HP\Desktop\AspNet\ImtahanaHazirliq\ImtahanaHazirliq\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\NoticeBoardRight\Detail.cshtml.g.cs
+C:\Users\HP\Desktop\AspNet\ImtahanaHazirliq\ImtahanaHazirliq\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\NoticeBoard\Create.cshtml.g.cs
+C:\Users\HP\Desktop\AspNet\ImtahanaHazirliq\ImtahanaHazirliq\obj\Debug\netcoreapp3.1\ImtahanaHazirliq.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\HP\Desktop\AspNet\ImtahanaHazirliq\ImtahanaHazirliq\bin\Debug\netcoreapp3.1\FluentValidation.dll
+C:\Users\HP\Desktop\AspNet\ImtahanaHazirliq\ImtahanaHazirliq\bin\Debug\netcoreapp3.1\FluentValidation.AspNetCore.dll
+C:\Users\HP\Desktop\AspNet\ImtahanaHazirliq\ImtahanaHazirliq\bin\Debug\netcoreapp3.1\FluentValidation.DependencyInjectionExtensions.dll

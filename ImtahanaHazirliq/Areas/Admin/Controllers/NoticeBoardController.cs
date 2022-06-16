@@ -1,6 +1,7 @@
 ﻿using ImtahanaHazirliq.DAL;
 using ImtahanaHazirliq.Models;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -37,6 +38,27 @@ namespace ImtahanaHazirliq.Areas.Admin.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
-        
+
+
+        public IActionResult Create()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> Create(NoticeBoard noticeBoard)
+        {
+            if (!ModelState.IsValid)
+			{
+                return View();
+			}
+
+            NoticeBoard newNoticeBoard=new NoticeBoard();
+            newNoticeBoard.DateTime = noticeBoard.DateTime;
+            newNoticeBoard.Description= noticeBoard.Description;
+           await _context.NoticeBoards.AddAsync(newNoticeBoard);
+            await _context.SaveChangesAsync();
+            return Content($"{noticeBoard.DateTime} {noticeBoard.Description}");
+        }
+
     }
 }
