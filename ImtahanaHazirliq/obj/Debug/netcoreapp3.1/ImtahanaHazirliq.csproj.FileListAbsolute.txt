@@ -138,3 +138,4 @@ C:\Users\HP\Desktop\AspNet\ImtahanaHazirliq\ImtahanaHazirliq\obj\Debug\netcoreap
 C:\Users\HP\Desktop\AspNet\ImtahanaHazirliq\ImtahanaHazirliq\bin\Debug\netcoreapp3.1\FluentValidation.dll
 C:\Users\HP\Desktop\AspNet\ImtahanaHazirliq\ImtahanaHazirliq\bin\Debug\netcoreapp3.1\FluentValidation.AspNetCore.dll
 C:\Users\HP\Desktop\AspNet\ImtahanaHazirliq\ImtahanaHazirliq\bin\Debug\netcoreapp3.1\FluentValidation.DependencyInjectionExtensions.dll
+C:\Users\HP\Desktop\AspNet\ImtahanaHazirliq\ImtahanaHazirliq\obj\Debug\netcoreapp3.1\Razor\Areas\Admin\Views\NoticeBoard\Update.cshtml.g.cs

@@ -57,8 +57,32 @@ namespace ImtahanaHazirliq.Areas.Admin.Controllers
             newNoticeBoard.Description= noticeBoard.Description;
            await _context.NoticeBoards.AddAsync(newNoticeBoard);
             await _context.SaveChangesAsync();
-            return Content($"{noticeBoard.DateTime} {noticeBoard.Description}");
+            return RedirectToAction(nameof(Index));
         }
+
+        public async Task<IActionResult>Update(int? id)
+        {
+            if (id == null) return NotFound();
+            NoticeBoard dbnoticeBoard = await _context.NoticeBoards.FindAsync(id);
+            if(dbnoticeBoard == null) return NotFound();
+            return View(dbnoticeBoard);
+        }
+        [HttpPost]
+        public async Task<IActionResult> Update(int? id,NoticeBoard noticeBoard)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            NoticeBoard dbnoticeBoard = await _context.NoticeBoards.FindAsync(id);
+            if (dbnoticeBoard == null) return NotFound();
+            dbnoticeBoard.DateTime = noticeBoard.DateTime;
+            dbnoticeBoard.Description=noticeBoard.Description;
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
+
+
 
     }
 }

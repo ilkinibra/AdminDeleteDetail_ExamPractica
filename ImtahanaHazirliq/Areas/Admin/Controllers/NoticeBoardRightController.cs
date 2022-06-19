@@ -38,6 +38,25 @@ namespace ImtahanaHazirliq.Areas.Admin.Controllers
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
+        public IActionResult Create(int? id)
+        {
+            return View();
+        }
+        [HttpPost]
+
+        public async Task<IActionResult> Create(NoticeBoardRight noticeBoardRight)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            NoticeBoardRight newnoticeBoardRight = new NoticeBoardRight();
+            newnoticeBoardRight.Title = noticeBoardRight.Title;
+            newnoticeBoardRight.Description = noticeBoardRight.Description;
+            await _context.NoticeBoardRights.AddAsync(newnoticeBoardRight);
+            await _context.SaveChangesAsync();
+            return RedirectToAction(nameof(Index));
+        }
 
     }
 }
